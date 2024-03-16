@@ -1,7 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_application_2/button.dart';
+import 'package:flutter_application_2/shop.dart';
+import 'button.dart';
+import 'count.dart';
+//import 'shop.dart';
+
 void main() {
   runApp(const MainApp());
 }
@@ -25,9 +29,16 @@ class _MainAppState extends State<MainApp> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Expanded(
-                flex:  4,
                 child: Stack(
                   children: [
+                    Align(
+                      alignment: Alignment(1, -0.7),
+                        child: Column(
+                          children: [
+                          Dashboard07CountCardCopyWidget(),
+                          Dashboard07CountCardCopyWidget(),
+                          shop(),
+                          ])),
                     Align(
                       alignment: AlignmentDirectional(0, 0),
                       child: ClipRRect(
